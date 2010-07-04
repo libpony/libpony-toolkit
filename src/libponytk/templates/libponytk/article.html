@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block pageclass %}article-page{% endblock %}
+{% block main_start %}<article>{% endblock %}
+{% block main_end %}</article>{% endblock %}
+{% block teaser %}
+    <p class="meta">
+        {% if article.author %}
+        <span class="author-wrapper">by <a href="" class="author">{{ article.author.name }}</a></span>
+        {% endif %}
+        <span class="datetime">{{ article.pub_date|date }}</span>
+    </p>
+    {{ article.teaser|safe }}
+{% endblock %}
+{% block primary %}{{ article.body|safe }}{% endblock %}
+{% block title %}{{ article.title }}{% endblock %}

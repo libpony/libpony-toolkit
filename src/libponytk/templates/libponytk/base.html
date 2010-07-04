@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>{% block head_title %}PREVIEW{% endblock %}</title>
+    <link rel="stylesheet"
+        href="{{ STATIC_URL }}libponytk/stylesheets/colaborate-font/stylesheet.css"
+        type="text/css" media="screen" />
+    <link rel="stylesheet"
+        href="{{ STATIC_URL }}libponytk/stylesheets/content.css"
+        type="text/css" media="all" />
+    <link rel="stylesheet"
+        href="{{ STATIC_URL }}libponytk/stylesheets/pygments.css"
+        type="text/css" media="all" />
+    <link rel="stylesheet"
+        href="{{ STATIC_URL }}libponytk/stylesheets/screen.css"
+        type="text/css" media="screen" />
+</head>
+<body>
+<div class="page {% block pageclass %}{% endblock %}">
+    <header>
+        <a class="logo" href="/">lib<span>pony</span></a>
+        <nav id="menu">
+            <ul>
+                {% block menuprefix %}{% endblock %}
+                <li><a href="/" class="{% block menu_start %}{% endblock %}">
+                    Start</a></li>
+                <li><a href="{% block menu_tags %}{% endblock %}">
+                    Tags</a></li>
+                <li><a href="{% block menu_contribute %}{% endblock %}">
+                    Contribute</a></li>
+                <li><a href="{% block menu_about %}{% endblock %}">
+                    About</a></li>
+                {% block menupostfix %}{% endblock %}
+            </ul>
+        </nav>
+    </header>
+    {% block main_start %}<div class="body">{% endblock %}
+    <header>
+        <h1>{% block title %}{% endblock %}</h1>
+        <section id="teaser">
+            {% block teaser %}{% endblock %}
+        </section>
+    </header>
+    <div class="main">
+        <div class="content">
+            {% block primary %}{% endblock %}
+            {% block contentfooter %}{% endblock %}
+        </div>
+        <aside class="secondary">
+            {% block secondary %}{% endblock %}
+        </aside>
+    </div>
+    {% block main_end %}</div>{% endblock %}
+</div>
+</body>
+</html>

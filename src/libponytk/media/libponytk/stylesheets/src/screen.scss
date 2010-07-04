@@ -1,0 +1,246 @@
+@import "compass";
+@import "blueprint/grid";
+@import "compass/reset";
+@import "basics";
+
+/*$dark_pink: #AA4B83;*/
+$dark_pink: #ba18ba;
+$darker_pink: #911291;
+$dark_green: #0BB22A;
+$light_grey: #FAFAFA;
+$menu_bg: rgba(145,18,145, 0.6);
+$sans: 'Colaborate-RegularRegular', Verdana, Arial, sans serif;
+$serif: Georgia, Times New Roman, serif;
+
+body {
+    font-size: 16px;
+    color: #111;
+    font-family: $serif;
+    background: url(images/bodybg.png) top left repeat-x #FFFFFF;
+}
+.page {
+    @include container;
+    background: url(images/ponybubble.png) 99% 30px no-repeat;
+
+    > header {
+        font-size: 110%;
+        background: $menu_bg;
+        color: #FFF;
+        border-bottom: 2px solid #FFF;
+        width: 100%;
+        overflow: hidden;
+        display: block;
+    }
+    a.logo {
+        display: block;
+        color: #FFF;
+        font-style: italic;
+        text-decoration: none;
+        width: 50px;
+        margin: 3px 10px 3px 10px;
+        float: left;
+
+        span {
+            font-weight: bold;
+            font-style: normal;
+        }
+
+    }
+    nav {
+        float: right;
+        width: 80%;
+    }
+}
+#menu ul {
+    margin: 0;
+    padding: 3px 1em 3px 0;
+    float: right;
+    text-align: right;
+    li {
+        float: left;
+        margin-left: 20px;
+
+        a {
+            color: #FFF;
+            display: block;
+            text-transform: lowercase;
+            text-decoration: none;
+            font-family: $sans;
+        }
+        a.active {
+            font-weight: bold;
+        }
+    }
+}
+
+
+.body header, .page>article header {
+    @include column(15);
+    @include prepend(1);
+    @include append(1);
+    @include last;
+    padding-top:1em;
+    font-family: $sans;
+    background: url(images/teaserbg.png) top left repeat-x $light_grey;
+    margin-bottom: 1.5em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    min-height: 210px;
+    z-index: 2;
+}
+
+.pony {
+    color: $dark_pink;
+}
+/*
+.library {
+    color: $dark_green;
+}
+    */
+
+.main>.content {
+    @include column(13);
+    @include append(1);
+    @include prepend(1);
+}
+
+.main>.secondary {
+    @include column(9, true);
+}
+article .main>.content {
+    @include column(15);
+    @include append(1);
+    @include prepend(1);
+    margin-top: 1em;
+}
+article .main>.secondary{
+    @include column(7, true);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $sans;
+    font-weight: normal;
+    letter-spacing: -1px;
+    color: #777;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none;
+}
+h1 {
+    font-size :40px;
+}
+
+p, dd, li {
+   line-height: 1.7em;
+}
+
+a {
+    color: $dark_pink;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.author-wrapper {
+    padding-right: 1em;
+    border-right: dotted 1px #AAA;
+    margin-right: 1em;
+}
+
+.author-wrapper .author {
+    font-weight: bold;
+    color: #888;
+}
+
+li.article {
+    margin-bottom: 2em;
+    border-top: solid 1px #EEE;
+    padding-top: 2em;
+}
+
+li.article:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+li.article h3 {
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu-tags li {
+    background: #D5FFC8; /*#F1F1F1;*/
+    margin-bottom: 1px;
+}
+.menu-tags li a {
+    padding: 7px;
+    display: block;
+    text-decoration: none;
+    font-family: $sans;
+}
+.menu-tags li a:hover {
+    background: #088921;
+    color: #FFF;
+}
+.meta {
+    font-size: 90%;
+    background-color: #EFEFEF;
+    border-top: dotted 2px #DDD;
+    border-bottom: dotted 2px #DDD;
+    display: block;
+    text-align: center;
+    padding: 4px;
+}
+.more {
+    display: block;
+    text-align: center;
+}
+
+.box .info {
+    margin-top: 1em;
+    font-size: 90%;
+    color: #777;
+}
+.box a {
+    color: $dark_green;
+}
+
+table {
+    width: 100%;
+    margin: 1em 0;
+    font-size: 90%;
+}
+th {
+    background: #EFEFEF;
+}
+td, th {
+    padding: 4px;
+    border-bottom: 1px solid #AAA;
+    border-right: 1px solid #AAA;
+}
+td:first-child, th:first-child {
+    margin-left: 0;
+    border-left: 1px solid #AAA;
+}
+th {
+    font-size: 90%;
+    font-weight: normal;
+    font-family: $sans;
+    color: #000;
+}
+table {
+    border-top: 1px solid #AAA;
+}
+

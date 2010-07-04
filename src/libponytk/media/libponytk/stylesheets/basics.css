@@ -1,0 +1,39 @@
+/* line 1, src/basics.scss */
+ul {
+  list-style: disc;
+}
+
+/* line 5, src/basics.scss */
+ol {
+  list-style: decimal;
+}
+
+/* line 9, src/basics.scss */
+li {
+  margin-left: 30px;
+}
+
+/* line 13, src/basics.scss */
+h1, h2, h3, h4, h5, h6, p, dl, ol, ul, pre, table, fieldset, blockquote {
+  margin-bottom: 30px;
+}
+
+/* line 17, src/basics.scss */
+h1 {
+  font-size: 25px;
+}
+
+/* line 20, src/basics.scss */
+h2 {
+  font-size: 23px;
+}
+
+/* line 23, src/basics.scss */
+h3 {
+  font-size: 20px;
+}
+
+/* line 26, src/basics.scss */
+h4 {
+  font-size: 18px;
+}

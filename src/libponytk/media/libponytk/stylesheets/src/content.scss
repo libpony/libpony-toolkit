@@ -1,0 +1,21 @@
+blockquote {
+    font-family: Georgia, serif;
+    margin: 1em 0 1.5em 2em;
+    font-style: italic;
+    color: #555;
+}
+blockquote em {
+    font-style: normal;
+}
+div.highlight {
+    font-size: 80%;
+    background: #EFEFEF;
+    padding: 3px 7px;
+    border: 1px solid #DDD;
+    border-left: 5px solid #DDD;
+    margin-bottom: 1em;
+    overflow: auto;
+}
+pre {
+    font-size: 90%;
+}

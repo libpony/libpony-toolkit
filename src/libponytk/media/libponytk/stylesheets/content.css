@@ -1,0 +1,28 @@
+/* line 1, src/content.scss */
+blockquote {
+  font-family: Georgia, serif;
+  margin: 1em 0 1.5em 2em;
+  font-style: italic;
+  color: #555;
+}
+
+/* line 7, src/content.scss */
+blockquote em {
+  font-style: normal;
+}
+
+/* line 10, src/content.scss */
+div.highlight {
+  font-size: 80%;
+  background: #EFEFEF;
+  padding: 3px 7px;
+  border: 1px solid #DDD;
+  border-left: 5px solid #DDD;
+  margin-bottom: 1em;
+  overflow: auto;
+}
+
+/* line 19, src/content.scss */
+pre {
+  font-size: 90%;
+}
