@@ -9,7 +9,7 @@ $darker_pink: #911291;
 $dark_green: #0BB22A;
 $light_grey: #FAFAFA;
 $menu_bg: rgba(145,18,145, 0.6);
-$sans: 'Colaborate-RegularRegular', Verdana, Arial, sans serif;
+$sans: 'TitilliumText22LMedium', Verdana, Arial, sans serif;
 $serif: Georgia, Times New Roman, serif;
 
 body {
@@ -30,6 +30,7 @@ body {
         width: 100%;
         overflow: hidden;
         display: block;
+        line-height: 35px;
     }
     a.logo {
         display: block;
@@ -37,7 +38,7 @@ body {
         font-style: italic;
         text-decoration: none;
         width: 50px;
-        margin: 3px 10px 3px 10px;
+        margin: 0px 10px 0px 10px;
         float: left;
 
         span {
